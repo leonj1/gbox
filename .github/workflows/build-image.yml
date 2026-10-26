@@ -48,7 +48,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, x64]
     outputs:
       built_output: ${{ steps.check-changes.outputs.should_build }}
       tag_output: ${{ steps.get-commit-tag.outputs.tag }}
